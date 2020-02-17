@@ -9,6 +9,8 @@ Enabling and customizing virtio build features
   <PropertyGroup>
     <Feature_AlwaysDefaultVendor>false</Feature_AlwaysDefaultVendor>
     <Feature_UsingWDF>false</Feature_UsingWDF>
+    <Feature_PackOne>true</Feature_PackOne>
+    <PackOne_DestinationPrefix>..\</PackOne_DestinationPrefix>
     <Feature_AdjustInf>true</Feature_AdjustInf>
     <CopyrightStrings>QxlCopyrightStrings</CopyrightStrings>
   </PropertyGroup>
