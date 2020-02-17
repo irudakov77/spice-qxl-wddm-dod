@@ -1,4 +1,5 @@
-; Copyright 2013-2016 Red Hat, Inc.
+;INX_COPYRIGHT_1
+;INX_COPYRIGHT_2
 ;
 ; Licensed under the Apache License, Version 2.0 (the "License");
 ; you may not use this file except in compliance with the License.
@@ -10,7 +11,7 @@
 Signature="$Windows NT$"
 Class=Display
 ClassGUID={4d36e968-e325-11ce-bfc1-08002be10318}
-Provider=%RHEL%
+Provider=%VENDOR%
 DriverVer= 03/15/2015, 1.01.01.0001
 CatalogFile=qxldod.cat
 
@@ -35,10 +36,10 @@ QxlDod_Files_Driver = 12
 ;
 
 [Manufacturer]
-%RHEL%=RHEL,NT$ARCH$.6.2
+%VENDOR%=QXLDevice,NT$ARCH$
 
-[RHEL.NT$ARCH$.6.2]
-%RHELQxl.DeviceDesc% = QxlDod_Inst, PCI\VEN_1B36&DEV_0100&SUBSYS_11001AF4
+[QXLDevice.NT$ARCH$]
+%QxlDeviceDesc% = QxlDod_Inst, PCI\VEN_1B36&DEV_0100&SUBSYS_1100_INX_SUBSYS_VENDOR_ID, PCI\VEN_1B36&DEV_0100
 
 [QxlDod_Files_Driver]
 qxldod.sys,,,2
@@ -71,9 +72,9 @@ HKR,, VgaCompatible,               %REG_DWORD%, 0
 [Strings]
 
 ;  *******Localizable Strings*******
-diskId1 = "Red Hat QXL controller Installation Disk"
-RHELQxl.DeviceDesc = "Red Hat QXL controller"
-RHEL = "Red Hat, Inc."
+VENDOR = "INX_COMPANY"
+DiskId1 = "INX_PREFIX_VIRTIOQXL controller Installation Disk #1"
+QxlDeviceDesc = "INX_PREFIX_VIRTIOQXL controller"
 
 ;  *******Non Localizable Strings*******
 SERVICE_BOOT_START = 0x0
